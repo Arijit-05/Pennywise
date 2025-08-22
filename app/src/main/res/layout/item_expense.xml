@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/expense_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_green"
+        android:text="₹500"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textViewCategory"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/dark_green"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Food" />
+
+</LinearLayout>

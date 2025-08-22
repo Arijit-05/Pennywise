@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:scrollbars="none"
+    tools:context=".fragments.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TODAY CARD -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/today_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_green"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:includeFontPadding="false"
+                    android:text="TODAY"
+                    android:textColor="@color/dark_green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/today_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:maxLines="1"
+                    android:text="₹1,039.93"
+                    android:textColor="@color/medium_green"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- WEEK AND MONTH CARDS -->
+        <LinearLayout
+            android:id="@+id/week_and_month_cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/today_card"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <!-- THIS WEEK CARD -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/this_week_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#579400"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:includeFontPadding="false"
+                        android:text="THIS WEEK"
+                        android:textColor="#CBF47C"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/this_week_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:maxLines="1"
+                        android:text="₹3,392"
+                        android:textColor="#CBF47C"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- THIS MONTH CARD -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/this_month_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#71C100"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:includeFontPadding="false"
+                        android:text="THIS MONTH"
+                        android:textColor="#355B00"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/this_month_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:maxLines="1"
+                        android:text="₹15,345"
+                        android:textColor="#355B00"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- ADD EXPENSE BTN -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/add_expense_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/week_and_month_cards"
+            android:layout_marginHorizontal="20dp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/lime"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:id="@+id/animated_bg"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:letterSpacing="0.1"
+                    android:layout_centerInParent="true"
+                    android:text="ADD EXPENSE"
+                    android:textColor="@color/dark_green"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- RECENT -->
+        <TextView
+            android:id="@+id/recent_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_expense_btn"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="RECENT"
+            android:textColor="@color/light_green"
+            android:textSize="16sp" />
+
+        <!-- RECYCLER VIEW -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recent_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recent_txt"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp" />
+
+        <!-- SPACE -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/recent_rv" />
+
+    </RelativeLayout>
+
+</ScrollView>

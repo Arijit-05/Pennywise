@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".AddExpenseActivity">
+
+    <!-- CLOSE BTN -->
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:src="@drawable/close"
+        android:layout_marginTop="20dp"
+        app:tint="@color/light_green"
+        android:layout_marginStart="20dp" />
+
+    <!-- TICK BTN -->
+    <ImageView
+        android:id="@+id/tick"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:src="@drawable/tick"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        app:tint="@color/light_green"
+        android:layout_marginEnd="20dp" />
+
+    <!-- CATG BTN -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/catg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="25dp"
+            android:gravity="center"
+            android:background="@color/light_green">
+
+            <TextView
+                android:id="@+id/catg_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Category"
+                android:textColor="@color/dark_green"
+                android:fontFamily="@font/montserrat_regular" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- EXPENSE AMT -->
+    <EditText
+        android:id="@+id/expense_amt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/key_pad"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:hint="0.00"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:background="@drawable/blank_bg"
+        android:textSize="65sp"
+        android:ellipsize="end"
+        android:textColor="@color/light_green"
+        android:textColorHint="#98BA51" />
+
+    <!-- KEYPAD -->
+    <LinearLayout
+        android:id="@+id/key_pad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/btn_1"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/btn_2"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/btn_3"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/btn_4"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/btn_5"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/btn_6"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/btn_7"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/btn_8"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/btn_9"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/btn_clear"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/back_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="←"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/btn_0"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/key_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/btn_dot"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/tick_bg"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="."
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
