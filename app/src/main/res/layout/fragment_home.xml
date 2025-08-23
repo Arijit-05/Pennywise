@@ -77,7 +77,8 @@
                     android:layout_height="match_parent"
                     android:background="#579400"
                     android:orientation="vertical"
-                    android:padding="15dp">
+                    android:padding="15dp"
+                    android:paddingHorizontal="15dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -86,7 +87,7 @@
                         android:includeFontPadding="false"
                         android:text="THIS WEEK"
                         android:textColor="#CBF47C"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/this_week_amt"
@@ -125,7 +126,7 @@
                         android:includeFontPadding="false"
                         android:text="THIS MONTH"
                         android:textColor="#355B00"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/this_month_amt"
