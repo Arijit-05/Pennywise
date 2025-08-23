@@ -63,7 +63,7 @@ class SettingsActivity : AppCompatActivity() {
         github = findViewById(R.id.github)
         github.setOnClickListener {
             Vibration.vibrate(this, 50)
-            val url = "https://github.com/Arijit-05"
+            val url = "https://github.com/Arijit-05/Pennywise"
             val intent = Intent(Intent.ACTION_VIEW, url.toUri())
             startActivity(intent)
         }
