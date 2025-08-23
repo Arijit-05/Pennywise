@@ -78,7 +78,7 @@
                     android:layout_height="match_parent"
                     android:background="#579400"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="15dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -119,7 +119,7 @@
                     android:layout_height="match_parent"
                     android:background="#71C100"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="15dp">
 
                     <TextView
                         android:layout_width="wrap_content"
