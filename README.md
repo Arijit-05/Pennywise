@@ -1,4 +1,4 @@
-# 💰 Pennywise
+# 🌱 Pennywise
 
 A modern **Expense Tracker Android app** built with **Kotlin**, designed to make money management simple and intuitive. It supports **multi-currency tracking**, lets users **categorize expenses**, and provides **visual insights** with interactive daily, weekly, and monthly charts.  
 
@@ -16,19 +16,23 @@ A modern **Expense Tracker Android app** built with **Kotlin**, designed to make
 
 ## 🚀 Tech Stack  
 - **Language:** Kotlin  
-- **Architecture:** MVVM (recommended structure)  
-- **Database:** Room / Firestore (depending on your implementation)  
-- **UI:** Jetpack Compose / XML (whichever you’re using)  
+- **Database:** Room 
+- **UI:** XML 
 - **Charts:** MPAndroidChart  
 
 ---
 
 ## 📷 Screenshots  
-*(Add your app screenshots here)*  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/21a6d495-b3a0-4e09-9dba-b2dc81ae3796" width="30%" />
+  <img src="https://github.com/user-attachments/assets/8fa63795-aace-405a-8111-623bc4e38804" width="30%" />
+  <img src="https://github.com/user-attachments/assets/0f1cb21c-665c-434d-a95c-73c7af4a7741" width="30%" />
+</p>
 
 ---
 
-## 📌 Roadmap
+## 📌 Upcoming ideas
 - Export expense reports (PDF/Excel)
 - Add cloud sync & backup
 - Implement AI-based spending insights
