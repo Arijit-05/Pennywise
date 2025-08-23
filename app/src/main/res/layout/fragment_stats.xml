@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:scrollbars="none"
     tools:context=".fragments.StatsFragment">
 
@@ -26,11 +25,11 @@
             android:id="@+id/daily_expense_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="0dp"
             android:layout_below="@id/last_seven_days_txt"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="10dp"
-            app:cardCornerRadius="20dp">
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -55,7 +54,7 @@
             android:layout_marginTop="10dp"
             app:cardCornerRadius="20dp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/lime"
@@ -64,8 +63,10 @@
                 android:paddingVertical="15dp">
 
                 <TextView
+                    android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/fire"
                     android:fontFamily="@font/montserrat_regular"
                     android:text="Most spent this month on"
                     android:textColor="@color/dark_green"
@@ -75,13 +76,25 @@
                     android:id="@+id/most_spent_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
                     android:fontFamily="@font/montserrat_bold"
                     android:includeFontPadding="false"
                     android:text="3rd Aug - ₹1,394"
                     android:textColor="@color/dark_green"
                     android:textSize="25sp" />
 
-            </LinearLayout>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/fire"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="-4dp"
+                    android:layout_marginTop="-3dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/fire_lottie" />
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -99,15 +112,15 @@
 
         <LinearLayout
             android:id="@+id/pie_layout"
-            android:background="@drawable/chart_bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:layout_marginTop="10dp"
             android:layout_below="@id/catg_wise_txt"
             android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/chart_bg"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/pie_chart"

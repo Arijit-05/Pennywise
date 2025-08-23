@@ -1,10 +1,11 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
+    android:paddingVertical="16dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="20dp"
     android:layout_marginBottom="10dp"
-    android:background="@drawable/expense_bg"
-    android:orientation="vertical">
+    android:background="@drawable/expense_bg">
 
     <TextView
         android:id="@+id/textViewAmount"
@@ -12,16 +13,30 @@
         android:layout_height="wrap_content"
         android:textColor="@color/dark_green"
         android:text="₹500"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
         android:fontFamily="@font/montserrat_bold"
-        android:textSize="23sp" />
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/catg_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/health" />
 
     <TextView
         android:id="@+id/textViewCategory"
         android:layout_width="wrap_content"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/dark_green"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:includeFontPadding="false"
+        android:layout_toEndOf="@id/catg_img"
+        android:layout_marginStart="10dp"
         android:text="Food" />
 
-</LinearLayout>
+</RelativeLayout>

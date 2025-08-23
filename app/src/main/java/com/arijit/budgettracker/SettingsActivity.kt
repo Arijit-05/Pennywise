@@ -31,7 +31,6 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         currency = findViewById(R.id.currency)
-        // Load saved currency and show it
         currencySelected = CurrencyPrefs.getSymbol(this)
         findViewById<TextView>(R.id.curr).text = currencySelected
         currency.setOnClickListener {
