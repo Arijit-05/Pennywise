@@ -15,6 +15,9 @@ interface ExpenseDao {
     @Query("SELECT * FROM expenses ORDER BY timestamp DESC")
     fun getAllExpensesFlow(): Flow<List<Expense>>
 
+    @Query("SELECT * FROM expenses ORDER BY timestamp DESC")
+    suspend fun getAllExpensesOnce(): List<Expense>
+
     @Query("SELECT * FROM expenses ORDER BY timestamp DESC limit 8")
     fun getLatest8Expenses(): LiveData<List<Expense>>
 

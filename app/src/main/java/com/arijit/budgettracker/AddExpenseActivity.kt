@@ -24,6 +24,7 @@ class AddExpenseActivity : AppCompatActivity() {
     private lateinit var cancelBtn: ImageView
     private lateinit var tickBtn: ImageView
     private lateinit var category: CardView
+    private lateinit var noteEditText: EditText
     private lateinit var expenseAmount: EditText
     private var catgSelected: String = ""
     private var finalExpenseAmt: String = ""
@@ -39,6 +40,7 @@ class AddExpenseActivity : AppCompatActivity() {
         }
 
         expenseAmount = findViewById(R.id.expense_amt)
+        noteEditText = findViewById(R.id.note_edit_text)
         cancelBtn = findViewById(R.id.close)
         cancelBtn.setOnClickListener {
             Vibration.vibrate(this, 100)
@@ -82,11 +84,15 @@ class AddExpenseActivity : AppCompatActivity() {
             finalExpenseAmt = expenseAmount.text.toString()
 
             if (finalExpenseAmt != "" && catgSelected != "") {
+                val noteText = noteEditText.text.toString().trim().ifEmpty { null }
                 lifecycleScope.launch {
                     val db = ExpenseDatabase.getDatabase(applicationContext)
                     val dao = db.expenseDao()
-                    val expense =
-                        Expense(amount = finalExpenseAmt.toDouble(), category = catgSelected)
+                    val expense = Expense(
+                        amount = finalExpenseAmt.toDouble(),
+                        category = catgSelected,
+                        note = noteText
+                    )
                     dao.insertExpense(expense)
                     finish()
                 }

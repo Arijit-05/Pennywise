@@ -13,51 +13,71 @@
         android:id="@+id/close"
         android:layout_width="30dp"
         android:layout_height="25dp"
-        android:src="@drawable/close"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        app:tint="@color/light_green"
-        android:layout_marginStart="20dp" />
+        android:src="@drawable/close"
+        app:tint="@color/light_green" />
 
     <!-- TICK BTN -->
     <ImageView
         android:id="@+id/tick"
         android:layout_width="30dp"
         android:layout_height="25dp"
-        android:src="@drawable/tick"
-        android:layout_marginTop="20dp"
         android:layout_alignParentEnd="true"
-        app:tint="@color/light_green"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/tick"
+        app:tint="@color/light_green" />
 
     <!-- CATG BTN -->
     <androidx.cardview.widget.CardView
         android:id="@+id/catg_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
         app:cardCornerRadius="30dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingVertical="10dp"
-            android:paddingHorizontal="25dp"
+            android:background="@color/light_green"
             android:gravity="center"
-            android:background="@color/light_green">
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="10dp">
 
             <TextView
                 android:id="@+id/catg_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
                 android:text="Category"
                 android:textColor="@color/dark_green"
-                android:fontFamily="@font/montserrat_regular" />
+                android:textSize="14sp" />
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <!-- NOTE EDITTEXT -->
+    <EditText
+        android:id="@+id/note_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/expense_amt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/blank_bg"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:hint="Add a note"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:inputType="text"
+        android:maxLength="150"
+        android:textColor="@color/light_green"
+        android:textColorHint="#98BA51"
+        android:textSize="16sp" />
 
     <!-- EXPENSE AMT -->
     <EditText
@@ -65,17 +85,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/key_pad"
-        android:layout_marginBottom="10dp"
         android:layout_marginHorizontal="20dp"
-        android:hint="0.00"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/blank_bg"
+        android:ellipsize="end"
         android:focusableInTouchMode="false"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
-        android:background="@drawable/blank_bg"
-        android:textSize="65sp"
-        android:ellipsize="end"
+        android:hint="0.00"
         android:textColor="@color/light_green"
-        android:textColorHint="#98BA51" />
+        android:textColorHint="#98BA51"
+        android:textSize="65sp" />
 
     <!-- KEYPAD -->
     <LinearLayout

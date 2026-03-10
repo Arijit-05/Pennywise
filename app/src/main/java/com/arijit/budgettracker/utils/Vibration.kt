@@ -12,13 +12,8 @@ object Vibration {
     fun vibrate(context: Context, ms: Long) {
         val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         if (vibrator.hasVibrator()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                val vibrationEffect = VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE)
-                vibrator.vibrate(vibrationEffect)
-            } else {
-                @Suppress("DEPRECATION")
-                vibrator.vibrate(ms) // Vibrate for 50 milliseconds
-            }
+            val vibrationEffect = VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE)
+            vibrator.vibrate(vibrationEffect)
         }
     }
 }

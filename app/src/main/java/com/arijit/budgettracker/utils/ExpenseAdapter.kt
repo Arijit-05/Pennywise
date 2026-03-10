@@ -30,12 +30,21 @@ class ExpenseAdapter(
     inner class ExpenseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewAmount: TextView = itemView.findViewById(R.id.textViewAmount)
         val textViewCategory: TextView = itemView.findViewById(R.id.textViewCategory)
+        val textViewNote: TextView = itemView.findViewById(R.id.textViewNote)
         val imageViewCategory: ImageView = itemView.findViewById(R.id.catg_img)
 
         fun bind(expense: Expense) {
             val sym = CurrencyPrefs.getSymbol(itemView.context)
             textViewAmount.text = "$sym${expense.amount}"
             textViewCategory.text = expense.category
+            val note = expense.note?.trim().orEmpty()
+            if (note.isNotEmpty()) {
+                textViewNote.visibility = View.VISIBLE
+                textViewNote.text = note
+            } else {
+                textViewNote.visibility = View.GONE
+                textViewNote.text = ""
+            }
             
             // Set category image based on category name
             val categoryImageName = expense.category.lowercase()
